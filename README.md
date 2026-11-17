@@ -1,8 +1,8 @@
 # Cyber Anki
 
-Simple, English-language flashcard practice for NKE **Introduction to Cybersecurity (ÁKIBTM013)**.
+Simple, English-language flashcard practice for NKE **Introduction to Cybersecurity** (MA ÁKIBTM013 with BA ÁKINTE03 syllabus supplements).
 
-- 112 original cards: eight for each of the curriculum's 14 topics.
+- 147 cards across 21 topics: 112 original MA-aligned cards (eight per topic) plus 35 BA-specific cards (five per topic).
 - Enter a six-character Neptun code, choose a topic, and practise ten cards at a time.
 - Reveal an answer, then select **Again / Hard / Good / Easy**.
 - Progress is stored centrally after each review and restored when the code is entered again.
@@ -40,7 +40,7 @@ Review events use idempotency identifiers and transactional writes so network re
 
 ## Curriculum and content
 
-The 14 topic groups follow the [official MA curriculum, course ÁKIBTM013, pages 48–49](https://antk.uni-nke.hu/document/akk-copy-uni-nke-hu/International%20Cybersecurity%20Studies%20MA%20-%20tanterv.pdf#page=48). Card wording and examples are original introductory practice material, not official examination questions.
+The first 14 topic groups follow the [official MA curriculum, course ÁKIBTM013, pages 48–49](https://antk.uni-nke.hu/document/akk-copy-uni-nke-hu/International%20Cybersecurity%20Studies%20MA%20-%20tanterv.pdf#page=48). Seven additional five-card groups cover BA ÁKINTE03 subjects: critical information infrastructure and cases, Hungary, EU/NATO, cyberdiplomacy, cybercrime, cyberwarfare, and hacktivism/cyberterrorism. Card wording and examples are original introductory practice material, not official examination questions. Some BA chapters may cover material not yet taught and should be reviewed before being assigned for the final exam.
 
 The deck lives in `lib/cards.ts`. Keep existing card IDs stable when editing wording so students retain their review history. Substantial changes to a learning objective should receive a new ID.
 

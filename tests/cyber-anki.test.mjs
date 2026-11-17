@@ -32,10 +32,10 @@ async function call(db, path, body, token = '', extra = {}) {
 }
 const review = (cardId, rating = 'good') => ({ cardId, rating, eventId: crypto.randomUUID() });
 
-test('curriculum has exactly eight unique, complete cards in every topic', () => {
-  assert.equal(topics.length, 14); assert.equal(cards.length, 112); assert.equal(new Set(cards.map(c => c.id)).size, 112);
-  assert.equal(new Set(cards.map(c => c.question)).size, 112);
-  for (let i = 0; i < 14; i++) assert.equal(cards.filter(c => c.topic === i).length, 8);
+test('curriculum has eight original and five BA-specific cards per topic', () => {
+  assert.equal(topics.length, 21); assert.equal(cards.length, 147); assert.equal(new Set(cards.map(c => c.id)).size, 147);
+  assert.equal(new Set(cards.map(c => c.question)).size, 147);
+  for (let i = 0; i < 21; i++) assert.equal(cards.filter(c => c.topic === i).length, i < 14 ? 8 : 5);
   for (const c of cards) for (const value of [c.question, c.answer, c.example]) assert.ok(value.length > 15);
 });
 test('initial intervals and lapse behaviour keep difficult cards due sooner', () => {

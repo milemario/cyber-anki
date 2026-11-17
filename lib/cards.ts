@@ -5,6 +5,13 @@ export const topics = [
   "Secure operations lifecycle", "Vulnerability and incident management", "Network, endpoint and identity protection",
   "Orchestration, automation and response", "Governance and risk management", "Compliance and supply-chain security",
   "Audits and awareness", "Current threats and defences",
+  "Critical information infrastructure and cases",
+  "Cybersecurity in Hungary",
+  "Cybersecurity in the EU and NATO",
+  "Cyberdiplomacy",
+  "Cybercrime",
+  "Cyberwarfare",
+  "Hacktivism and cyberterrorism",
 ];
 export type Card = { id: string; topic: number; question: string; answer: string; example: string };
 const content: string[][][] = [
@@ -147,6 +154,55 @@ const content: string[][][] = [
 ["What is prompt injection in an AI-enabled application?", "Untrusted content tries to cause a model or connected workflow to follow instructions that conflict with its intended task or controls.", "A retrieved document tells an assistant to expose information instead of summarising the document."],
 ["Why do new threats rarely make basic security controls irrelevant?", "New techniques often still depend on familiar weaknesses such as poor access control, exposed systems or ineffective recovery.", "Strong identity controls and tested incident response remain useful when an attack uses AI-generated content."],
 ["How should an organisation evaluate a newly advertised security tool?", "Start with the problem, evidence, environment and operational fit. Test whether it improves relevant outcomes before relying on claims.", "A small pilot can reveal whether a tool reduces meaningful risk or only produces more alerts."],
+],
+[
+  ["What is critical information infrastructure (CII)?", "Information systems essential to the functioning of critical services, whose disruption could have serious consequences for society or the economy.", "Electricity-grid control systems and hospital information systems can support essential services."],
+  ["How do operational technology (OT) and ordinary office IT differ?", "OT monitors or controls physical processes. Its failure may have direct safety and service consequences, not only data or productivity consequences.", "A water-treatment control system affects the physical treatment process, unlike a typical office email server."],
+  ["Why is availability especially important for critical services?", "Interruptions can affect public safety, health, transport or essential supplies, even when no information is stolen.", "An unavailable hospital system can delay treatment decisions."],
+  ["What did the 2015 attacks on Ukraine's power grid demonstrate?", "Cyber operations against electricity-sector systems can contribute to real-world power outages.", "Attackers interfered with electricity distribution, showing that cyber incidents can have physical service impacts."],
+  ["What does the 2021 Colonial Pipeline incident illustrate about IT and critical services?", "An attack on business IT can still disrupt an essential physical service when the operator suspends operations to manage risk.", "Colonial Pipeline stopped pipeline operations after a ransomware incident affecting its business network."],
+],
+[
+  ["What is a major role of Hungary's National Cyber Security Centre (NKI)?", "NKI operates national-level cyber incident handling and threat-related activities, alongside specified supervisory and vulnerability-assessment functions.", "An affected organisation may need to coordinate a relevant report or response through the competent incident-handling body."],
+  ["What does CSIRT stand for, and what does one do?", "Computer Security Incident Response Team. It receives or coordinates incident reports and supports technical response and information sharing.", "A CSIRT can share indicators of compromise so other organisations can defend themselves."],
+  ["Why does Hungary have a national cybersecurity strategy?", "To set shared national priorities for resilience, prevention, coordination, capabilities and cooperation.", "Government bodies and essential-service operators can align their cyber efforts around common objectives."],
+  ["Does a single authority supervise cybersecurity across every Hungarian sector?", "No. Different Hungarian authorities have responsibilities for different sectors and types of organisations, including NKI, SZTFH, MNB and the defence sector's competent authority.", "A bank and a public administration body may be subject to different cybersecurity supervisory authorities."],
+  ["Why must a Hungarian organisation check its specific legal and sectoral scope?", "Cybersecurity duties, supervisory bodies and reporting requirements can differ according to the organisation's sector, activities and legal status.", "A small private service provider should not assume it has exactly the same legal obligations as a ministry."],
+],
+[
+  ["What is ENISA's role in European cybersecurity?", "ENISA is the European Union Agency for Cybersecurity, supporting cyber resilience, cooperation, knowledge and policy implementation.", "ENISA publishes guidance and supports EU-level cybersecurity coordination."],
+  ["How do GDPR and NIS2 address different concerns?", "GDPR concerns personal-data protection and its lawful processing; NIS2 establishes cybersecurity risk-management and incident-reporting requirements for organisations within its scope.", "A company might need to consider both data-protection and cyber-resilience requirements."],
+  ["What is the NATO Cooperative Cyber Defence Centre of Excellence (CCDCOE)?", "A NATO-accredited multinational centre in Tallinn focused on cyber-defence research, training and exercises; it is not part of NATO's command structure.", "The CCDCOE supports learning and exercises but is not a NATO operational cyber command."],
+  ["What does NATO's recognition of cyberspace as an operational domain mean?", "NATO treats cyberspace as a domain relevant to defence planning and operations, alongside other operational domains.", "A military mission has to consider the security and availability of networks and digital systems."],
+  ["What is the purpose of EU national cybersecurity coordination centres (NCCs)?", "They connect national cybersecurity communities with European competence-building, research, innovation and funding efforts.", "A national coordination centre can connect domestic research or industry participants to European cybersecurity initiatives."],
+],
+[
+  ["What is cyberdiplomacy?", "The use of diplomatic dialogue, cooperation and foreign-policy tools to manage international issues arising in cyberspace.", "States negotiate expectations for responsible behaviour and cooperation on cyber incidents."],
+  ["What is the EU Cyber Diplomacy Toolbox intended to do?", "Help the EU and member states prevent, deter and respond to malicious cyber activities using coordinated foreign-policy measures.", "Diplomatic statements, engagement with partners and restrictive measures may form part of a response."],
+  ["Why is technical attribution different from political attribution?", "Technical analysis assesses evidence about how an operation happened and who may have carried it out. Political attribution is a public state-level judgement with diplomatic consequences.", "A malware similarity alone is not the same as a government's formal attribution statement."],
+  ["What are confidence-building measures in cybersecurity?", "Practical steps such as dialogue, information sharing and agreed communication channels that reduce misunderstanding and escalation.", "States can establish points of contact for urgent cyber-incident communication."],
+  ["Why is international cybersecurity cooperation not limited to governments?", "Internet infrastructure and services involve companies, researchers, standards bodies and civil society, so many actors contribute to stability and security.", "A vulnerability may require coordinated action by vendors, national teams and international partners."],
+],
+[
+  ["What makes an activity cybercrime?", "An offence in which computers, networks or digital systems are the target or an important means of committing the crime, depending on applicable law.", "Stealing banking credentials for fraud is an example of cyber-enabled crime."],
+  ["What does ransomware-as-a-service (RaaS) mean?", "A criminal operating model in which ransomware developers provide tools or infrastructure to affiliates who carry out attacks, often sharing proceeds.", "An affiliate gains access to a company while a separate group supplies the ransomware operation."],
+  ["Does using cryptocurrency make cybercriminal payments untraceable?", "No. Many blockchain transactions are publicly recorded, although linking wallets to real people can be difficult and criminals may try to obscure trails.", "Investigators may follow on-chain payment movements while needing additional evidence to identify a wallet owner."],
+  ["What is business email compromise (BEC)?", "Fraud that uses impersonation or compromised communications to trick people into making payments or disclosing valuable information.", "A fake message appears to come from a company director and requests an urgent bank-transfer change."],
+  ["Is accessing the dark web itself necessarily a crime?", "No. The technology can support lawful privacy-preserving activities, although some marketplaces and services facilitate crime.", "Journalists and activists may use anonymity tools for legitimate purposes, while illicit marketplaces may use similar tools."],
+],
+[
+  ["How does cyberespionage differ from a disruptive cyber operation?", "Cyberespionage primarily seeks information; a disruptive operation seeks to impair, manipulate or destroy systems or services. An operation can have more than one purpose.", "Quietly copying classified files differs from intentionally interrupting a power supply."],
+  ["Why is attributing a state-linked cyber operation difficult?", "Attackers can hide behind intermediaries, shared tools and misleading indicators, so conclusions usually depend on multiple types of evidence.", "The location of a server used in an attack does not by itself identify the state responsible."],
+  ["Why is Stuxnet frequently discussed in cyberwarfare studies?", "It illustrated that malicious code could target industrial control processes and cause physical equipment damage.", "The operation targeted centrifuge-related industrial equipment rather than merely stealing digital documents."],
+  ["Which international humanitarian law principles can be relevant to cyber operations during armed conflict?", "Where international humanitarian law applies, principles such as distinction, proportionality and precautions in attack can be relevant to cyber operations.", "An operation expected to affect a civilian hospital requires legal assessment of potential civilian harm."],
+  ["What is meant by hybrid operations that involve cyber activity?", "The combination of cyber means with other instruments such as information operations, political pressure or conventional activity to pursue strategic objectives.", "A campaign may combine network disruption with misleading public messages and diplomatic pressure."],
+],
+[
+  ["What is hacktivism?", "The use of hacking-related activity to advance political, social or ideological goals, sometimes through unlawful methods.", "A politically motivated group defaces a website to publicise a cause."],
+  ["How can a distributed denial-of-service (DDoS) attack be used by hacktivists?", "Many sources send traffic or requests to overwhelm a service, making it unavailable as a form of disruption or protest.", "A public website becomes unreachable during a coordinated traffic flood."],
+  ["How can hacktivism and financially motivated cybercrime differ?", "The stated motivation is often ideological or political in hacktivism and financial in profit-driven cybercrime, but methods and motivations can overlap.", "An ideological defacement and a payment-card theft may use similar intrusion methods for different goals."],
+  ["Why should the label cyberterrorism be used carefully?", "Not every politically motivated intrusion is terrorism. Definitions generally involve serious harm or threats and an intent to intimidate or coerce, and legal definitions differ.", "A protest website defacement should not automatically be categorised in the same way as an attack intended to terrorise civilians."],
+  ["Does believing in a political cause automatically authorise hacking another organisation?", "No. A political or ideological motivation does not by itself create legal permission to access, damage or disrupt someone else's systems.", "A group may support a legitimate cause while still committing an offence by breaking into a website."],
 ],
 ];
 export const cards: Card[] = content.flatMap((group, topic) => group.map(([question, answer, example], index) => ({
